@@ -1,9 +1,9 @@
-# WearOS-App: "Tally Counter"
+# WearOS-App: "BMI-Berechnung"
 
 Android-Studio-Project for a WearOS-App to perform a calcuation of the 
 "Body Mass Index" (BMI). 
-See [this page (in German)](https://www.uni-hohenheim.de/wwwin140/info/interaktives/bmi.htm)
-for how to calculate and interpret the BMI.
+See [this page](https://www.cdc.gov/nccdphp/dnpao/growthcharts/training/bmiage/page5_1.html)
+for more information on the BMI.
 
 Clone or download this repository, then open the project with option 
 "Open an existing Android Studio project" on Android Studio's Welcome screen.
@@ -17,6 +17,12 @@ The repository contains several variations of the app in different branches.
 
 ----
 ## Screenshots
+
+![Screenshot 1: Eingabe Gewicht](Screenshot_1.png)
+
+![Screenshot 2: Anzeige Ergebnis](Screenshot_4.png)
+
+<br>
 
 
 ----
