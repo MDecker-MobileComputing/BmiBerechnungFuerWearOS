@@ -18,9 +18,9 @@ The repository contains several variations of the app in different branches.
 ----
 ## Screenshots
 
-![Screenshot 1: Eingabe Gewicht](Screenshot_1.png)
+![Screenshot 1: Eingabe Gewicht](screenshot_1.png)
 
-![Screenshot 2: Anzeige Ergebnis](Screenshot_4.png)
+![Screenshot 2: Anzeige Ergebnis](screenshot_4.png)
 
 <br>
 
