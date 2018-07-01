@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boxedEdges="all">
+
+    <!-- Ein ScrollView-Element darf nur ein direktes Kind-Element haben
+         (es erbt von FrameLayout, welches auch nur ein direktes Kind-Element
+         beinhalten kann), deshalb verwenden wir hier ein LinearLayout. -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="15dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="BMI-Berechnung" />
+
+            <!-- Eingabe Körpergewicht:
+                 Basis-Wert ist 40 kg, also Max-Gewicht 200 kg. -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:text="Körpergewicht (kg)" />
+            <SeekBar
+                android:id="@+id/gewichtSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="0"
+                android:max="160"
+                android:progress="30" />
+            <TextView
+                android:id="@+id/gewichtTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="25dp"
+                android:textSize="20sp"
+                android:text="x kg" />
+
+            <!-- Eingabe Körpergröße:
+                 Basis-Wert ist 100cm, also Max-Größe 250 cm. -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Körpergröße (cm)"
+                android:textSize="20sp" />
+            <SeekBar
+                android:id="@+id/groesseSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="0"
+                android:max="150"
+                android:progress="80" />
+            <TextView
+                android:id="@+id/groesseTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="25dp"
+                android:textSize="20sp"
+                android:text="y cm" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:text="Geschlecht" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp" >
+                <RadioButton
+                    android:id="@+id/radio_button_mann"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Männlich" />
+                <RadioButton
+                    android:id="@+id/radio_button_frau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weiblich" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/berechnenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Berechnen" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.wear.widget.BoxInsetLayout>
