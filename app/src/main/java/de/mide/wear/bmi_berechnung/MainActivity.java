@@ -118,12 +118,16 @@ public class MainActivity extends WearableActivity
     /**
      * Event-Handler-Methode aus Interface
      * {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Diese Methode wird aufgerufen, wenn die Wert-Änderung mit
-     * einem der beiden SeekBar-Elementen beendet ist (Finger
-     * von Nutzer wieder hochgehoben).
      */
     @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
+    public void onProgressChanged(SeekBar seekBar,
+                                  int progress,
+                                  boolean fromUser) {
+
+        if (progress % 2 == 0) {
+            return;
+        }
+
         if (seekBar == _gewichtSeekBar) {
             aktualisiereAnzeigeGewicht();
         } else {
@@ -135,14 +139,12 @@ public class MainActivity extends WearableActivity
     /**
      * Event-Handler-Methode aus Interface
      * {@link android.widget.SeekBar.OnSeekBarChangeListener}.
+     * Diese Methode wird aufgerufen, wenn die Wert-Änderung mit
+     * einem der beiden SeekBar-Elementen beendet ist (Finger
+     * von Nutzer wieder hochgehoben).
      */
     @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-        if (progress % 2 == 0) {
-            return;
-        }
-
+    public void onStopTrackingTouch(SeekBar seekBar) {
         if (seekBar == _gewichtSeekBar) {
             aktualisiereAnzeigeGewicht();
         } else {
