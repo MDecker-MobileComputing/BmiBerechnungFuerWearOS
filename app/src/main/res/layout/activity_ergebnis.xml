@@ -9,29 +9,42 @@
     tools:context=".ErgebnisActivity"
     tools:deviceIds="wear">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        android:orientation="vertical"
         app:boxedEdges="all">
 
-        <TextView
-            android:id="@+id/bmiTextView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"
-            android:layout_marginBottom="25dp"
-            android:text="N/A" />
+            android:layout_height="match_parent"
+            android:padding="@dimen/inner_frame_layout_padding"
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/klassifikationsTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:gravity="center_horizontal"
-            android:text="N/A" />
+            <TextView
+                android:id="@+id/bmiTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:text="N/A" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/klassifikationsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:text="N/A" />
+
+            <Button
+                android:id="@+id/zurueckButton"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zurück" />
+
+        </LinearLayout>
+
+    </ScrollView>
 </android.support.wear.widget.BoxInsetLayout>

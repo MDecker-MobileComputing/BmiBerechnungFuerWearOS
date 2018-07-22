@@ -11,7 +11,8 @@ import android.widget.TextView;
  * Activity zur Anzeige des berechneten BMI-Werts; wird über einen
  * sog. "expliziten Intent" von der MainActivity aufgerufen.
  */
-public class ErgebnisActivity extends WearableActivity {
+public class ErgebnisActivity extends WearableActivity
+                              implements View.OnClickListener {
 
     /** UI-Element zur Anzeige des BMI-Werts. */
     protected TextView _bmiTextView = null;
@@ -32,6 +33,11 @@ public class ErgebnisActivity extends WearableActivity {
         _klassifikationsTextView = findViewById( R.id.klassifikationsTextView );
 
         ergebnisAnzeigen();
+
+
+        Button button = findViewById( R.id.zurueckButton );
+        button.setOnClickListener( this );
+
 
         // Enables Always-on
         setAmbientEnabled();
@@ -90,6 +96,17 @@ public class ErgebnisActivity extends WearableActivity {
         }
 
         _klassifikationsTextView.setText( "Klassifikation:\n" + klassifikationsString );
+    }
+
+
+    /**
+     * Event-Handler für Zurück-Button.
+     *
+     * @param view Button, der Event ausgelöst hat.
+     */
+    @Override
+    public void onClick(View view) {
+        finish();
     }
 
 }
