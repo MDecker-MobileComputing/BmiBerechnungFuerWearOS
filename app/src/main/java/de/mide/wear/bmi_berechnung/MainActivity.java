@@ -12,13 +12,16 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 /**
+ * App für Berechnung von "Body Mass Index".
+ * <br><br>
+ *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class MainActivity extends WearableActivity
                           implements SeekBar.OnSeekBarChangeListener,
                                      View.OnClickListener {
-
 
     /** Schlüssel, um einem expliziten intent den errechneten Wert BMI-Wert mitzugeben. */
     public static final String EXTRA_KEY_BMI_WERT = "bmi_wert";

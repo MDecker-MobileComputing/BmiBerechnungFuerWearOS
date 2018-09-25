@@ -7,9 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 /**
  * Activity zur Anzeige des berechneten BMI-Werts; wird über einen
  * sog. "expliziten Intent" von der MainActivity aufgerufen.
+ * <br><br>
+ *
+ * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class ErgebnisActivity extends WearableActivity
                               implements View.OnClickListener {
